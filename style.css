@@ -1,0 +1,125 @@
+:root {
+    --title-font: 'Bebas Neue', cursive;
+    --text-content: 'Mulish', sans-serif;
+    --color-first-card: #ff780a;
+    --color-second-card: rgb(11, 102, 100);
+    --color-third-card: #0e4634f8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+    /* border: 1px solid blue; */
+}
+
+.contenedor {
+    margin: 100px auto;
+    max-width: 800px;
+    display: flex;
+}
+
+.card-one {
+    background-color: var(--color-first-card);
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.card-one>a {
+    color: var(--color-first-card);
+}
+
+.card-two,
+.card-two>a {
+    background-color: var(--color-second-card);
+}
+
+.card-two>a {
+    color: var(--color-second-card);
+}
+
+.card-three {
+    background-color: var(--color-third-card);
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-three>a {
+    color: var(--color-third-card);
+}
+
+.card-contain * {
+    display: block;
+    padding: 0 20px 15px 0;
+}
+
+.card-contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 30px;
+    max-width: 33.33%;
+    height: 500px;
+}
+
+.card-contain>h2 {
+    font-family: 'Bebas Neue', cursive;
+    /* letter-spacing: 2px; */
+    font-weight: 100;
+    font-size: 30px;
+    line-height: 2;
+}
+
+.card-contain>p {
+    /* text-align: justify; */
+    font-family: 'Mulish', sans-serif;
+    line-height: 1.5;
+}
+
+.card-contain>a {
+    font-weight: 900;
+    font-size: 15px;
+    margin-top: 70px;
+    font-family: 'Mulish', sans-serif;
+    text-align: center;
+    background-color: white;
+    border-radius: 50px;
+    width: 120px;
+    line-height: 2.5;
+    padding: 0;
+}
+
+.card-contain>a:hover {
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+@media screen and (max-width:700px) {
+    .contenedor {
+        max-width: 600px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-contain {
+        max-width: 90%;
+    }
+    .card-one {
+        background-color: var(--color-first-card);
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 0;
+    }
+    .card-two {
+        background-color: var(--color-second-card);
+    }
+    .card-three {
+        background-color: var(--color-third-card);
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 15px;
+    }
+}
